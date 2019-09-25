@@ -1,0 +1,14 @@
+var hitX = 200;
+var hitY = 200;
+var hitW = 100;
+var hitH = 50;
+function setup() {
+  // put setup code here
+  createCanvas(400,400);
+}
+
+function draw() {
+  // put drawing code here
+if(mouseX > hitX && mouseX < hitX )
+
+}
