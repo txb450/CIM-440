@@ -20,24 +20,29 @@ function setup() {
   // put setup code here
   createCanvas(400,400);
 
-  pButton = createbutton("puppy");
+  pButton = createButton("puppy");
   pButton.mousePressed(function(){
     currentImage = 0;
   });
 
-  dButton = createbutton("dinosaur");
+  dButton = createButton("dinosaur");
   dButton.mousePressed(function(){
     currentImage = 1;
   });
 
-  sButton = createbutton("sloth");
+  sButton = createButton("sloth");
   sButton.mousePressed(function(){
     currentImage = 2;
   });
 
-  cButton = createbutton("cheetah")c;
-  cButton = createbutton(function(){
+  cButton = createButton("cheetah");
+  cButton.mousePressed(function(){
     currentImage = 3;
+  });
+
+  lButton = createButton("lizard");
+  lButton.mousePressed(function(){
+    currentImage = 4;
   });
 }
 
@@ -54,7 +59,13 @@ function draw() {
   }else if(currentImage == 2){
     //show Sloth
       image(sloth,0,0,sloth.width/4, sloth.height/4);
-
+    }else if(currentImage == 3){
+      //show cheetah
+      image(cheetah,0,0,cheetah.width/4,cheetah.height/4);
+    }else if(currentImage == 4){
+      //show lizard
+      image(lizard,0,0,lizard.width/4,lizard.height/4);
+    }
     }
 
     //another way to do it is to do image(currentAnimal,0,0,currentAnimal.width/4,currentAnimal.height/4);
