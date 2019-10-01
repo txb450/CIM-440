@@ -16,6 +16,8 @@ function preload(){
   imageArray[0] = loadImage("images/puppy.jpg");
   imageArray[1] = loadImage("images/dinosaur.jpg");
   imageArray[2] = loadImage("images/sloth.jpg");
+  imageArray[3] = loadImage("images/cheetah.jpg");
+  imageArray[4] = loadImage("images/lizard.jpg");
 }
 
 function setup() {
@@ -46,9 +48,17 @@ rect(hitX[1],hitY[1],hitSize,hitSize);
       console.log("Button 0");
       currentImage = currentImage + 1;
 
-      if(currentImage == 3){
+      if(currentImage == 5){
         currentImage = 0;
       }//end of smaller if statement
     }//end of biggest if statement
+    if(mouseX > hitX[1] && mouseX < hitX[1] + hitSize && mouseY > hitY[1] && mouseY < hitY[1] + hitSize){
 
+      console.log("Button 1");
+      currentImage = currentImage - 1;
+
+      if(currentImage == -1){
+        currentImage = 4;
+      }
+}
   }//end of mouse pressed
